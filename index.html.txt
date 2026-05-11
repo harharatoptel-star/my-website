@@ -1,0 +1,171 @@
+!DOCTYPE html
+html lang=ar dir=rtl
+head
+meta charset=UTF-8
+meta name=viewport content=width=device-width, initial-scale=1.0
+titleشركة المشاريع الهندسيةtitle
+style
+     {
+        margin 0;
+        padding 0;
+        box-sizing border-box;
+        font-family 'Tajawal', Arial, sans-serif;
+    }
+    body {
+        background linear-gradient(180deg, #0A1F44 0%, #1A2F54 100%);
+        color #E5E5E5;
+        min-height 100vh;
+    }
+    .container {
+        max-width 1200px;
+        margin 0 auto;
+        padding 40px 20px;
+    }
+    header {
+        text-align center;
+        margin-bottom 50px;
+    }
+    header h1 {
+        color #D4AF37;
+        font-size 36px;
+        margin-bottom 10px;
+    }
+    header p {
+        color #E5E5E5;
+        font-size 18px;
+    }
+    .projects {
+        display grid;
+        grid-template-columns repeat(auto-fit, minmax(300px, 1fr));
+        gap 30px;
+        margin-bottom 50px;
+    }
+    .project {
+        background #1A2F54;
+        border 2px solid #D4AF37;
+        border-radius 12px;
+        overflow hidden;
+        text-align center;
+        position relative;
+    }
+    .project img {
+        width 100%;
+        height 220px;
+        object-fit contain;
+        background #0A1F44;
+    }
+    .project-badge {
+        position absolute;
+        top 15px;
+        right 15px;
+        background #D4AF37;
+        color #0A1F44;
+        padding 8px 15px;
+        border-radius 50px;
+        font-weight bold;
+        font-size 14px;
+    }
+    .project-info {
+        padding 20px;
+    }
+    .project-info h3 {
+        color #D4AF37;
+        margin-bottom 10px;
+        font-size 20px;
+    }
+    .project-info p {
+        margin 5px 0;
+        font-size 15px;
+    }
+    .total-box {
+        background #1A2F54;
+        border 2px solid #D4AF37;
+        border-radius 10px;
+        padding 20px;
+        text-align center;
+        margin-bottom 40px;
+        color #D4AF37;
+        font-size 20px;
+        font-weight bold;
+    }
+    footer {
+        border-top 1px solid #D4AF37;
+        padding-top 30px;
+        text-align center;
+    }
+    .footer-icons {
+        display flex;
+        justify-content center;
+        gap 40px;
+        flex-wrap wrap;
+    }
+    .footer-item {
+        color #D4AF37;
+        font-size 15px;
+    }
+    @media (max-width 768px) {
+        .projects {
+            grid-template-columns 1fr;
+        }
+        header h1 {
+            font-size 28px;
+        }
+    }
+style
+head
+body
+div class=container
+    header
+        h1مشاريع الأنظمة الشمسية والمراقبة ومكافحة الحرائقh1
+        pنفذ مشاريعك بجودة عالية وفي الوقت المحددp
+    header
+
+    div class=projects
+        div class=project
+            span class=project-badgeتم التسليمspan
+            img src=project1.jpg alt=مشروع 1
+            div class=project-info
+                h3نظام طاقة شمسية - خنفرh3
+                pstrongالجهةstrong منظمة كيرp
+                pstrongالقيمةstrong 33,000 دولارp
+                pstrongالمدةstrong 60 يومp
+            div
+        div
+
+        div class=project
+            span class=project-badgeتم التسليمspan
+            img src=project2.jpg alt=مشروع 2
+            div class=project-info
+                h3نظام مراقبة - شركة وايh3
+                pstrongالجهةstrong شركة واي للاتصالاتp
+                pstrongالقيمةstrong 12,000 دولارp
+                pstrongالمدةstrong 30 يومp
+            div
+        div
+
+        div class=project
+            span class=project-badgeتم التسليمspan
+            img src=project3.jpg alt=مشروع 3
+            div class=project-info
+                h3نظام مكافحة حرائق - شركة وايh3
+                pstrongالجهةstrong شركة واي للاتصالاتp
+                pstrongالقيمةstrong 23,450 دولارp
+                pstrongالمدةstrong 30 يومp
+            div
+        div
+    div
+
+    div class=total-box
+        إجمالي قيمة المشاريع المنفذة $68,000  تم التسليم قبل الموعد المحدد
+    div
+
+    footer
+        div class=footer-icons
+            div class=footer-item📧 coharhara@gmail.comdiv
+            div class=footer-item📱 778868855 - 779059995div
+            div class=footer-item📍 عدن - المنصورة - شارع 90div
+        div
+    footer
+div
+body
+html
