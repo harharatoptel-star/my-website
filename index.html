@@ -2,109 +2,122 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>المشاريع المنجزة</title>
+  <title>مؤسسة عبد الهادي هارع للمقاولات والخدمات</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
     body {
-      background-color: #0a1f44;
+      font-family: 'Cairo', 'Tajawal', sans-serif;
+      background: url('project3.jpg') no-repeat center fixed;
+      background-size: cover;
+      min-height: 100vh;
       color: white;
-      font-family: 'Cairo', sans-serif;
+    }
+    
+    /* الطبقة الشفافة عشان النص يبان */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10, 31, 68, 0.75);
+      z-index: -1;
+    }
+    
+    header {
       text-align: center;
-      padding: 40px;
+      padding: 40px 20px 20px;
     }
-    h1 {
+    
+    header h1 {
+      font-size: 32px;
       color: #f5c542;
-      font-size: 36px;
+      margin-bottom: 10px;
     }
-    .subtitle {
-      color: #ccc;
-      margin-bottom: 40px;
-    }
-    .projects {
+    
+    nav {
       display: flex;
       justify-content: center;
-      gap: 20px;
       flex-wrap: wrap;
+      gap: 15px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
-    .card {
-      background: #0a1f44;
+    
+    .nav-item {
+      background: rgba(245, 197, 66, 0.15);
       border: 2px solid #f5c542;
       border-radius: 12px;
-      width: 300px;
-      overflow: hidden;
+      padding: 15px 25px;
+      min-width: 140px;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.3s;
+      backdrop-filter: blur(5px);
     }
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-    .badge {
+    
+    .nav-item:hover {
       background: #f5c542;
       color: #0a1f44;
-      display: inline-block;
-      padding: 5px 15px;
-      border-radius: 20px;
-      margin: 10px;
-      font-weight: bold;
+      transform: translateY(-5px);
     }
-    .card h3 {
-      color: #f5c542;
-      margin: 10px;
+    
+    .nav-item .icon {
+      font-size: 28px;
+      display: block;
+      margin-bottom: 8px;
     }
-    .card p {
-      margin: 5px;
-      color: #ddd;
-    }
-    .total {
-      border: 2px solid #f5c542;
-      border-radius: 12px;
-      padding: 15px;
-      margin-top: 40px;
-      color: #f5c542;
-      font-size: 20px;
+    
+    .nav-item span {
+      font-size: 16px;
       font-weight: bold;
     }
   </style>
 </head>
 <body>
 
-  <h1>المشاريع المنجزة</h1>
-  <p class="subtitle">نفتخر بمشاريعنا بجودة عالية وفي الوقت المحدد</p>
+  <header>
+    <h1>مؤسسة عبد الهادي هارع للمقاولات والخدمات</h1>
+  </header>
 
-  <div class="projects">
-    <!-- الصورة رقم 3 تظهر أولاً -->
-    <div class="card">
-      <img src="project3.jpg" alt="محطة طاقة شمسية">
-      <span class="badge">المسلم</span>
-      <h3>خفر - محطة طاقة شمسية</h3>
-      <p>منظمة كير</p>
-      <p>القيمة: 33,000 دولار</p>
-      <p>المدة: 60 يوم</p>
+  <nav>
+    <div class="nav-item">
+      <span class="icon">🏠</span>
+      <span>الرئيسية</span>
     </div>
-
-    <!-- الصورة رقم 2 -->
-    <div class="card">
-      <img src="project2.jpg" alt="نظام مراقبة">
-      <span class="badge">المسلم</span>
-      <h3>واي - نظام مراقبة وتركيبة</h3>
-      <p>شركة واي للاتصالات</p>
-      <p>القيمة: 12,000 دولار</p>
-      <p>المدة: 30 يوم</p>
+    
+    <div class="nav-item">
+      <span class="icon">ℹ️</span>
+      <span>من نحن</span>
     </div>
-
-    <!-- الصورة رقم 1 -->
-    <div class="card">
-      <img src="project1.jpg" alt="نظام مكافحة حرائق">
-      <span class="badge">المسلم</span>
-      <h3>واي - نظام مكافحة حرائق وشركة</h3>
-      <p>شركة واي للاتصالات</p>
-      <p>القيمة: 23,450 دولار</p>
-      <p>المدة: 30 يوم</p>
+    
+    <div class="nav-item">
+      <span class="icon">⚙️</span>
+      <span>خدماتنا</span>
     </div>
-  </div>
-
-  <div class="total">
-    إجمالي قيمة المشاريع المنفذة: $68,000 قبل التسليم قبل الموعد المحدد
-  </div>
+    
+    <div class="nav-item">
+      <span class="icon">🤝</span>
+      <span>شركاء النجاح</span>
+    </div>
+    
+    <div class="nav-item">
+      <span class="icon">🏗️</span>
+      <span>معداتنا</span>
+    </div>
+    
+    <div class="nav-item">
+      <span class="icon">✅</span>
+      <span>الجودة والسلامة</span>
+    </div>
+  </nav>
 
 </body>
 </html>
