@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مؤسسة عبدالحافظ هرهرة للمقاولات والخدمات</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: #0a1f44;
+      color: white;
+    }
+    
+    .top-header {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      background: rgba(10, 31, 68, 0.95);
+      padding: 12px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(245, 197, 66, 0.3);
+    }
+    
+    .header-link {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: 0.3s;
+      padding: 8px 15px;
+      border-radius: 6px;
+    }
+    
+    .header-link:hover {
+      background: #f5c542;
+      color: #0a1f44;
+    }
+    
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+      padding-top: 65px;
+    }
+    
+    .poster-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    @media (max-width: 768px) {
+      .top-header {
+        gap: 10px;
+        padding: 10px 15px;
+      }
+      .header-link {
+        font-size: 14px;
+        padding: 6px 10px;
+      }
+      .container {
+        padding-top: 55px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-header">
+    <a href="why-us.html" class="header-link">
+      <span>❓</span>
+      <span>لماذا نحن</span>
+    </a>
+    
+    <a href="contact.html" class="header-link">
+      <span>📞</span>
+      <span>تواصل معنا</span>
+    </a>
+    
+    <a href="values.html" class="header-link">
+      <span>⭐</span>
+      <span>قيمنا</span>
+    </a>
+  </div>
+
+  <div class="container">
+    <img src="home-poster.jpg" alt="مؤسسة عبدالحافظ هرهرة للمقاولات والخدمات" class="poster-img">
+  </div>
+
+</body>
+</html>
