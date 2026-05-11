@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مؤسسة عبدالحافظ هرهرة للمقاولات والخدمات</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: #0a1f44;
+      color: white;
+      overflow-x: hidden;
+    }
+    
+    /* الشريط الجانبي */
+    .sidebar {
+      position: fixed;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 80px;
+      background: rgba(10, 31, 68, 0.9);
+      backdrop-filter: blur(15px);
+      border-radius: 20px 0 0 20px;
+      border: 1px solid rgba(245, 197, 66, 0.3);
+      border-right: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+      gap: 18px;
+      z-index: 100;
+      transition: all 0.3s ease;
+    }
+    
+    .sidebar-item {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(245, 197, 66, 0.1);
+      border: 1px solid rgba(245, 197, 66, 0.3);
+      border-radius: 12px;
+      text-decoration: none;
+      color: white;
+      transition: all 0.3s;
+      position: relative;
+    }
+    
+    .sidebar-item:hover {
+      background: #f5c542;
+      border-color: #f5c542;
+      transform: translateX(-8px);
+      box-shadow: 0 5px 20px rgba(245, 197, 66, 0.4);
+    }
+    
+    .sidebar-item .icon {
+      width: 26px;
+      height: 26px;
+      fill: #f5c542;
+      transition: all 0.3s;
+    }
+    
+    .sidebar-item:hover .icon {
+      fill: #0a1f44;
+    }
+    
+    /* النص المنبثق */
+    .sidebar-item .label {
+      position: absolute;
+      right: 65px;
+      background: #f5c542;
+      color: #0a1f44;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      white-space: nowrap;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(10px);
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    
+    .sidebar-item .label::after {
+      content: '';
+      position: absolute;
+      right: -6px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-left: 6px solid #f5c542;
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+    }
+    
+    .sidebar-item:hover .label {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+    
+    /* حاوية الصورة */
+    .hero-container {
+      width: 100%;
+      height: 100vh;
+      padding-right: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .hero-img {
+      max-width: calc(100% - 40px);
+      max-height: 92vh;
+      object-fit: contain;
+      display: block;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    }
+    
+    /* للجوال */
+    @media (max-width: 768px) {
+      .sidebar {
+        bottom: 20px;
+        top: auto;
+        right: 50%;
+        transform: translateX(50%);
+        flex-direction: row;
+        width: auto;
+        height: 65px;
+        padding: 0 15px;
+        gap: 12px;
+        border-radius: 15px;
+        border-right: 1px solid rgba(245, 197, 66, 0.3);
+      }
+      
+      .sidebar-item {
+        width: 45px;
+        height: 45px;
+      }
+      
+      .sidebar-item .label {
+        display: none;
+      }
+      
+      .hero-container {
+        padding-right: 0;
+        padding-bottom: 90px;
+        height: 100vh;
+      }
+      
+      .hero-img {
+        max-height: 85vh;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- الشريط الجانبي -->
+  <div class="sidebar">
+    <a href="index.html" class="sidebar-item">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+      <span class="label">الرئيسية</span>
+    </a>
+    
+    <a href="about.html" class="sidebar-item">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+      <span class="label">من نحن</span>
+    </a>
+    
+    <a href="why-us.html" class="sidebar-item">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.37.59-.88.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>
+      <span class="label">لماذا نحن</span>
+    </a>
+    
+    <a href="services.html" class="sidebar-item">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.3 4.3C.2 4.7 0 5.9 0 7.4c0 2.4.3 5.5 1.8 7.4L9 21.7c1.9 1.5 4.9 1.7 7.4 1.8 1.5 0 2.7-.2 3.1-1.3l-3.8-3.8z"/></svg>
+      <span class="label">خدماتنا</span>
+    </a>
+    
+    <a href="values.html" class="sidebar-item">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      <span class="label">قيمنا</span>
+    </a>
+    
+    <a href="quality.html" class="sidebar-item">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+      <span class="label">الجودة والسلامة</span>
+    </a>
+    
+    <a href="partners.html" class="sidebar-item">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+      <span class="label">شركاء النجاح</span>
+    </a>
+    
+    <a href="equipment.html" class="sidebar-item">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M20 8h-2.81l-2.06-2.94C14.61 4.4 13.89 4 13.12 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-8c0-.6-.4-1-1-1zm-6 5h-2v2h-2v-2H8v-2h2V9h2v2h2v2z"/></svg>
+      <span class="label">المعدات</span>
+    </a>
+    
+    <a href="contact.html" class="sidebar-item">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      <span class="label">تواصل معنا</span>
+    </a>
+    
+    <a href="gallery.html" class="sidebar-item">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+      <span class="label">صور من عملنا</span>
+    </a>
+  </div>
+
+  <!-- الصورة الرئيسية -->
+  <div class="hero-container">
+    <img src="home-poster.jpg" alt="مؤسسة عبدالحافظ هرهرة للمقاولات والخدمات" class="hero-img">
+  </div>
+
+</body>
+</html>
