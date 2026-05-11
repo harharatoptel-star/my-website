@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>من نحن - مؤسسة عبدالحافظ هرهرة</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -12,22 +13,21 @@
     }
     
     body {
-      font-family: 'Cairo', 'Tajawal', sans-serif;
-      background: url('project2.jpg') no-repeat center fixed;
-      background-size: cover;
-      min-height: 100vh;
+      font-family: 'Cairo', sans-serif;
+      background: #0a1f44;
       color: white;
     }
     
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+    }
+    
+    .poster-img {
       width: 100%;
-      height: 100%;
-      background: rgba(10, 31, 68, 0.75);
-      z-index: -1;
+      height: auto;
+      display: block;
     }
     
     .back-btn {
@@ -41,8 +41,8 @@
       border-radius: 8px;
       font-weight: bold;
       transition: 0.3s;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      z-index: 10;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      z-index: 100;
     }
     
     .back-btn:hover {
@@ -63,6 +63,10 @@
 <body>
 
   <a href="index.html" class="back-btn">العودة للرئيسية</a>
+
+  <div class="container">
+    <img src="about-poster.jpg" alt="من نحن - مؤسسة عبدالحافظ هرهرة" class="poster-img">
+  </div>
 
 </body>
 </html>
